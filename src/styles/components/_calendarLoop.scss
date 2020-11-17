@@ -1,0 +1,25 @@
+@each $day, $margin in $days {
+  .calendar-#{$day} > div:first-child {
+    margin-left: ($block-size + 1) * $margin;
+  }
+}
+
+// display: none have only 3 boxes
+
+@for $i from 28 through 31 {
+  .calendar-#{$i} > div:nth-child(n + #{$i}) {
+    display: none;
+  }
+}
+
+@for $i from 28 through 31 {
+  .calendar-#{$i} > div:nth-child(-n + #{$i}) {
+    display: block;
+  }
+}
+
+@for $i from 1 through 31 {
+  .calendar > div:nth-child(#{$i}):before {
+    content: "#{$i}";
+  }
+}
