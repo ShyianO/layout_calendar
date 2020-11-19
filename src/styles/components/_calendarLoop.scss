@@ -1,10 +1,10 @@
-@each $day, $margin in $days {
+@each $day, $margin in $days-array {
   .calendar-#{$day} > div:first-child {
     margin-left: ($block-size + 1) * $margin;
   }
 }
 
-// display: none have only 3 boxes
+// display: none has only 3 boxes
 
 @for $i from 28 through 31 {
   .calendar-#{$i} > div:nth-child(n + #{$i}) {

@@ -2,8 +2,9 @@
   width: $block-size * 7 + $block-gap * 7;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
 
-  div {
+  > div {
     width: $block-size;
     height: $block-size;
     margin: 0 $block-gap $block-gap 0;
@@ -23,7 +24,7 @@
 
     &:hover {
       transform: translateY(-20px);
-      background-color: pink;
+      background-color: #ffc0cb;
     }
   }
 }
