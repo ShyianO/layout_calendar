@@ -14,7 +14,7 @@
 
 @for $i from 28 through 31 {
   .calendar-#{$i} > div:nth-child(-n + #{$i}) {
-    display: block;
+    display: flex;
   }
 }
 
